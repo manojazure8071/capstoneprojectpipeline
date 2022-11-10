@@ -1,0 +1,19 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('git_clone') {
+            steps {
+               git url: 'https://github.com/vsvvkt/Training-Alchemy.git', branch: 'master'
+            }
+        }
+        stage('git_newpipe') {
+            steps {
+                // Get some code from a GitHub repository
+                git url: 'https://github.com/vsvvkt/Training-Alchemy.git', branch: 'master'
+                }
+        }
+        
+        
+    }
+}
